@@ -17,7 +17,7 @@ const SidebarOptions = ({...props}) => {
           </Header>
           <Content style={styles.content}>
             <DrawerContentScrollView {...props}>
-              <DrawerItemList {...props}/>
+              <DrawerItemList {...props} style={styles.item}/>
             </DrawerContentScrollView>
           </Content>
           <Footer style={styles.footer}>
@@ -27,6 +27,7 @@ const SidebarOptions = ({...props}) => {
     );
 }
 export default SidebarOptions;
+
 const styles = StyleSheet.create({
   container:{
     flex:1
@@ -50,7 +51,12 @@ const styles = StyleSheet.create({
     paddingLeft:15
   },
   content:{
-    paddingLeft:10,
+    paddingLeft:0,
     alignContent:"flex-start",
+    alignSelf:'auto',
+  },
+  item:{
+    backgroundColor:"red",
+    alignContent:'center',
   }
 });

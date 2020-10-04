@@ -5,10 +5,9 @@ import Colors from '../styles/Color';
 const UserHeader = (props) => {
     return(
         <View style={styles.wrapper}>
-          <Thumbnail source={{
-              uri:
-                "https://cdn.onlinewebfonts.com/svg/img_367856.png"
-          }}
+          <Thumbnail source={
+              require('../img/user.png')
+          }
              circular={true} 
              style={styles.thumbnail}
           />
@@ -24,22 +23,24 @@ export default UserHeader;
 
 const styles = StyleSheet.create({
     wrapper:{
-        justifyContent:"space-around",
+        justifyContent:"center",
         height:190,
         paddingTop:40,
-        alignItems:"center"
+        alignItems:"center",
     },
     thumbnail:{
-        height:60,
-        width:60,
+        height:70,
+        width:70,
     },
     userName:{
         color: Colors.green,
-        fontSize:16,
+        fontSize:20,
     },
     buttonText:{
         color: Colors.green,
-        textDecorationLine:'underline'
+        textDecorationLine:'underline',
+        fontSize:12,
+        paddingTop:15
     },
     button:{
     }
